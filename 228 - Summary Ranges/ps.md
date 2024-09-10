@@ -11,14 +11,14 @@ You are given a sorted unique integer array `nums`. The goal is to return the sm
 - **String Formatting**: The output requires formatting integers into a specific string representation for ranges.
 - **Greedy Algorithms**: The approach to forming ranges can be viewed as a greedy method, where we try to extend ranges as much as possible.
 
----
+
 ## Constraints
 
 - The input array `nums` is sorted and contains unique integers.
 - The values in `nums` can range from `-2^31` to `2^31 - 1`.
 - The length of `nums` can be between `0` and `10^4`.
 
----
+
 ## Examples
 
 1. **Example 1**:
@@ -36,24 +36,24 @@ You are given a sorted unique integer array `nums`. The goal is to return the sm
     - **Output**: `[]`
     - **Explanation**: An empty input results in an empty output.
 
----
+
 ## Solution Overview
 
 The solution involves iterating through the `nums` array while maintaining a start index for the current range. The algorithm checks for consecutive numbers and forms ranges accordingly. If a break in the sequence is found, the current range is finalized and added to the result.
 
----
+
 ## Complexities
 
 - **Time Complexity**: O(n), where n is the number of elements in the input array. The algorithm processes each element exactly once.
 - **Space Complexity**: O(k), where k is the number of ranges produced. This accounts for the space needed to store the output.
 
----
+
 ## Key Insights
 
 - The problem can be efficiently solved using a single pass through the array, leveraging the sorted property of `nums`.
 - The output format requires careful string manipulation to ensure ranges are represented correctly.
 
----
+
 ## Algorithm
 
 1. **Initialization**: Start by checking if the input array is empty. If it is, return an empty list.
@@ -63,14 +63,14 @@ The solution involves iterating through the `nums` array while maintaining a sta
 3. **Finalizing the Last Range**: After the loop, ensure that the last range is added to the result.
 4. **Return the Result**: The list of ranges is returned as the output.
 
----
+
 ## Special Cases
 
 - **Empty Input**: If `nums` is empty, the output should also be an empty list.
 - **Single Element**: If `nums` contains only one element, the output should be that element as a string.
 - **Consecutive Numbers**: If all numbers are consecutive, they should be combined into a single range.
 
----
+
 ## Example Explanation
 
 For the input `nums = [0, 1, 2, 4, 5, 7]`:
@@ -88,4 +88,3 @@ For the input `nums = [0, 1, 2, 4, 5, 7]`:
 
 This structured approach effectively captures all ranges in the input array while adhering to the problem's constraints and requirements.
 
----

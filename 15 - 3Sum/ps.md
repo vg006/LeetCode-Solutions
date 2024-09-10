@@ -6,7 +6,7 @@ The LeetCode problem **3Sum** (Problem 15) requires finding all unique triplets 
 - The sum of the triplet equals zero: $$ nums[i] + nums[j] + nums[k] = 0 $$.
 - The solution set must not contain duplicate triplets.
 
----
+
 ### Topics Covered
 
 - Array manipulation
@@ -14,13 +14,13 @@ The LeetCode problem **3Sum** (Problem 15) requires finding all unique triplets 
 - Two-pointer technique
 - Handling duplicates
 
----
+
 ### Constraints
 
 - The input array `nums` can contain between 0 and 3000 elements.
 - Each element in `nums` can range from -10^9 to 10^9.
 
----
+
 ## Examples
 
 1. **Example 1:**
@@ -38,7 +38,7 @@ The LeetCode problem **3Sum** (Problem 15) requires finding all unique triplets 
    - **Output:** `[]`
    - **Explanation:** No triplet sums to zero since all numbers are non-negative.
 
----
+
 ## Solution Overview
 
 The solution to the 3Sum problem typically involves the following steps:
@@ -51,14 +51,14 @@ The solution to the 3Sum problem typically involves the following steps:
 
 4. **Avoiding Duplicates:** After finding a valid triplet, move the pointers past any duplicate elements to ensure that the same triplet is not counted multiple times.
 
----
+
 ## Time and Space Complexity
 
 - **Time Complexity:** The overall time complexity is `O(n^2)` due to the nested iteration (one for fixing the element and another for the two-pointer search).
 
 - **Space Complexity:** The space complexity is `O(1)`  if we ignore the space used for the output list, as the algorithm primarily operates in-place.
 
----
+
 ## Key Insights
 
 - **Sorting is Crucial:** Sorting the array simplifies the process of finding pairs and managing duplicates.
@@ -67,7 +67,7 @@ The solution to the 3Sum problem typically involves the following steps:
 
 - **Handling Duplicates:** Careful management of duplicate entries ensures that the solution set contains only unique triplets.
 
----
+
 ## Algorithm Steps
 
 1. **Sort the Array:** Start by sorting the array to facilitate the two-pointer method and to easily skip duplicates.
@@ -85,14 +85,14 @@ The solution to the 3Sum problem typically involves the following steps:
 
 6. **Repeat:** Continue this process until all elements have been considered as a fixed element.
 
----
+
 ## Special Cases
 
 - An empty array or an array with fewer than three elements should return an empty list.
 
 - Arrays with all positive or all negative numbers cannot yield any triplets that sum to zero.
 
----
+
 ## Example Explanation
 
 Consider the array `nums = [-1, 0, 1, 2, -1, -4]`.
@@ -119,4 +119,3 @@ Consider the array `nums = [-1, 0, 1, 2, -1, -4]`.
 
 By following this approach, all unique triplets that sum to zero can be efficiently found.
 
----

@@ -2,12 +2,12 @@
 
 LeetCode Problem 918, titled **Maximum Sum Circular Subarray**, requires finding the maximum possible sum of a contiguous subarray within a circular array. The circular nature of the array means that the last element is connected to the first element, allowing for subarrays that wrap around.
 
----
+
 ## Problem Statement
 
 Given a circular integer array `nums` of length `n`, return the maximum possible sum of a non-empty subarray.
 
----
+
 ### Topics Covered
 
 - `Arrays`
@@ -15,13 +15,13 @@ Given a circular integer array `nums` of length `n`, return the maximum possible
 - `Kadane's Algorithm`
 - `Circular Arrays`
 
----
+
 ### Constraints
 
 - $$ 1 \leq \text{nums.length} \leq 3,000 $$
 - $$ -10^6 \leq \text{nums[i]} \leq 10^6 $$
 
----
+
 ## Examples
 
 1. **Example 1:**
@@ -49,18 +49,18 @@ Given a circular integer array `nums` of length `n`, return the maximum possible
     - **Output:** `-1`
     - **Explanation:** The maximum sum subarray is `[-1]`.
 
----
+
 ## Solution Overview
 
 To solve the problem, we can utilize Kadane's algorithm to find both the maximum subarray sum and the minimum subarray sum. The final result will be the maximum of these two values: either the maximum subarray sum found using Kadane's algorithm or the total sum of the array minus the minimum subarray sum. This approach effectively handles the circular nature of the array.
 
----
+
 ## Complexity Analysis
 
 - **Time Complexity:** `O(n)` , where n is the length of the input array. This is due to the linear scan of the array to compute the maximum and minimum subarray sums.
 
 - **Space Complexity:** `O(1)` , as we are using a fixed amount of extra space for variables and not using any data structures that grow with the input size.
----
+
 ## Key Insights
 
 1. **Kadane’s Algorithm**: This algorithm helps find the maximum sum of a contiguous subarray in linear time. We can extend it to find both the maximum and minimum sums.
@@ -68,12 +68,12 @@ To solve the problem, we can utilize Kadane's algorithm to find both the maximum
 2. **Circular Array Handling**: The maximum circular subarray sum can be computed by taking the total sum of the array and subtracting the minimum subarray sum. This effectively considers the elements that are wrapped around.
 
 3. **Edge Case**: If all elements are negative, the maximum sum will simply be the largest single element.
----
+
 ## Special Cases
 
 - If the array has only one element, the maximum sum is that element itself.
 - If all elements are negative, the result will be the maximum single element (which is the least negative).
----
+
 ## Algorithm
 
 1. **Calculate Total Sum**: Compute the total sum of the array.
@@ -85,7 +85,7 @@ To solve the problem, we can utilize Kadane's algorithm to find both the maximum
 4. **Compute the Result**: The result will be the maximum of the maximum subarray sum and the total sum minus the minimum subarray sum.
 
 5. **Handle Edge Cases**: If the maximum subarray sum is equal to the total sum of the array, it indicates that all elements are negative, and we should return the maximum subarray sum directly.
----
+
 ## Example Explanation
 
 Let's walk through the example with `nums = [1, -2, 3, -2]`.
@@ -118,4 +118,4 @@ Let's walk through the example with `nums = [1, -2, 3, -2]`.
 
 5. **Final Output**: The maximum sum of a circular subarray is `3`.
 
----
+

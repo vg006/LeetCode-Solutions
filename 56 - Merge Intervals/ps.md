@@ -4,20 +4,20 @@ The 56th problem on LeetCode, titled **Merge Intervals**, is a well-known algori
 
 You are given an array of intervals, where each interval is represented as a pair of integers `[start_i, end_i]`. The task is to merge all overlapping intervals and return a new array of non-overlapping intervals.
 
----
+
 ## Topics Covered
 
 - **Sorting**: The intervals need to be sorted based on their starting times to facilitate merging.
 - **Greedy Algorithms**: The problem can be solved using a greedy approach to ensure that we always merge the intervals optimally.
 - **Array Manipulation**: The solution involves manipulating arrays to store merged intervals.
 
----
+
 ## Constraints
 
 - The input intervals are guaranteed to be valid, meaning they will not start after they end.
 - The number of intervals can vary, but typical constraints may involve `1 <= intervals.length <= 10^4` and `0 <= start_i <= end_i <= 10^4`.
 
----
+
 ## Examples
 
 1. **Example 1**:
@@ -30,7 +30,7 @@ You are given an array of intervals, where each interval is represented as a pai
     - **Output**: `[[1,5]]`
     - **Explanation**: The intervals `[1,4]` and `[4,5]` are considered overlapping and are merged into `[1,5]`.
 
----
+
 ## Solution Overview
 
 The solution involves the following steps:
@@ -41,19 +41,19 @@ The solution involves the following steps:
 
 3. **Return the Result**: After processing all intervals, return the list of merged intervals.
 
----
+
 ## Complexities
 
 - **Time Complexity**: $$O(n \log n)`, where $$n$$ is the number of intervals. This is due to the sorting step.
 - **Space Complexity**: $$O(n)` for storing the merged intervals.
 
----
+
 ## Key Insights
 
 - Sorting the intervals is crucial as it allows for a linear scan to merge overlapping intervals efficiently.
 - Overlapping intervals are defined such that if the start of one interval is less than or equal to the end of another, they overlap.
 
----
+
 ## Algorithm
 
 1. Sort the intervals based on their start times.
@@ -62,13 +62,13 @@ The solution involves the following steps:
     - If the current interval overlaps with the last added interval in the merged list, merge them.
     - Otherwise, add the current interval as a new entry in the merged list.
 
----
+
 ## Special Cases
 
 - Intervals that touch at the endpoints (e.g., `[1,4]` and `[4,5]`) are considered overlapping.
 - If all intervals are non-overlapping, the output will be the same as the input.
 
----
+
 ## Example Explanation
 
 For the input `[[1,3],[2,6],[8,10],[15,18]]`:
@@ -83,4 +83,3 @@ For the input `[[1,3],[2,6],[8,10],[15,18]]`:
 
 This structured approach to the problem not only provides clarity in understanding the merging process but also highlights the importance of sorting in solving interval-related problems efficiently.
 
----

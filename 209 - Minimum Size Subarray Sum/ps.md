@@ -2,12 +2,12 @@
 
 The LeetCode problem **Minimum Size Subarray Sum** (Problem 209) requires finding the minimal length of a contiguous subarray of which the sum is greater than or equal to a given target. If no such subarray exists, the function should return `0`.
 
----
+
 ## Problem Statement
 
 Given an array of positive integers `nums` and a positive integer `target`, the task is to determine the length of the smallest contiguous subarray whose sum is at least `target`.
 
----
+
 ## Topics Covered
 
 - Sliding Window Technique
@@ -15,13 +15,13 @@ Given an array of positive integers `nums` and a positive integer `target`, the 
 - Array Manipulation
 - Prefix Sums
 
----
+
 ## Constraints
 
 - The length of `nums` can be up to 10^5.
 - Each element in `nums` is a positive integer, and `target` is also a positive integer.
 
----
+
 ## Examples
 
 1. **Example 1:**
@@ -39,7 +39,7 @@ Given an array of positive integers `nums` and a positive integer `target`, the 
     - **Output:** `0`
     - **Explanation:** There is no subarray that meets the requirement.
 
----
+
 ## Solution Overview
 
 The solution to the Minimum Size Subarray Sum problem can be effectively implemented using the sliding window technique. This approach allows us to maintain a dynamic range of elements that can be expanded or contracted based on the current sum relative to the target.
@@ -60,19 +60,19 @@ The solution to the Minimum Size Subarray Sum problem can be effectively impleme
 
 - **Space Complexity:** The space complexity is O(1), as we are using a constant amount of extra space for variables.
 
----
+
 ## Key Insights
 
 - The sliding window technique is particularly effective for problems involving contiguous subarrays, allowing for efficient updates to the sum and length without needing to recompute sums from scratch.
 - The approach is optimal for large input sizes, making it suitable within the constraints provided.
 
----
+
 ## Special Cases
 
 - If the input array is empty or if no subarray meets the target, the function should return `0`.
 - The algorithm should handle cases where the target is less than the smallest element in the array, ensuring that it returns `0` in such scenarios.
 
----
+
 ## Example Explanation
 
 Consider the input `target = 7` and `nums = [2,3,1,2,4,3]`.
@@ -98,4 +98,3 @@ Consider the input `target = 7` and `nums = [2,3,1,2,4,3]`.
 
 This example illustrates how the sliding window technique efficiently finds the desired subarray length while dynamically adjusting the window size.
 
----

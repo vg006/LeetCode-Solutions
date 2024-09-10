@@ -55,7 +55,6 @@ The solution involves using an additional stack to keep track of the minimum ele
 - The key insight is to use an additional stack to keep track of the minimum elements, which allows us to retrieve the minimum element in constant time.
 - The minimum stack is updated in a way that ensures its top element always represents the minimum element in the main stack.
 
----
 ## Algorithm
 
 1. **Initialization**: Create two stacks: `mainStack` to store the elements and `minStack` to keep track of the minimum elements.
@@ -68,12 +67,10 @@ The solution involves using an additional stack to keep track of the minimum ele
 4. **Top Operation**: Return the top element of the `mainStack`.
 5. **GetMin Operation**: Return the top element of the `minStack`.
 
----
 ## Special Cases
 
 - **Empty Stack**: If the stack is empty, the `top()` and `getMin()` operations should return `-1` or throw an exception, depending on the implementation.
 
----
 ## Example Explanation
 
 Let's consider the example given in the problem statement:
@@ -88,5 +85,3 @@ Let's consider the example given in the problem statement:
 5. **GetMin Operation**: Return the top element of `minStack`, which is `-2`.
 
 This solution ensures that the `getMin()` operation can be performed in constant time while maintaining the time complexity of `push()`, `pop()`, and `top()` operations at `O(1)`.
-
----
